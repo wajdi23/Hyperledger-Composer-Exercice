@@ -4,7 +4,7 @@
   },
   "name": "e-commerce-network",
   "version": "0.0.1",
-  "description": "this is a simulation of an e-commerce",
+  "description": "e-commerce",
   "scripts": {
     "prepublish": "mkdirp ./dist && composer archive create --sourceType dir --sourceName . -a ./dist/e-commerce-network.bna",
     "pretest": "npm run lint",
@@ -15,8 +15,8 @@
     "composer",
     "composer-network"
   ],
-  "author": "azzahamdani",
-  "email": "azzahamdani@gmail.com",
+  "author": "wajdi belhadjali",
+  "email": "belhadjali.wajdi@gmail.com",
   "license": "Apache-2.0",
   "devDependencies": {
     "composer-admin": "^0.19.7",

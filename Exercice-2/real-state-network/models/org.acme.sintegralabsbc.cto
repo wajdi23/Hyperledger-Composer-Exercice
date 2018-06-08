@@ -17,3 +17,39 @@
  */
 
 namespace org.acme.sintegralabsbc
+
+participant Buyer identified by buyerID { 
+  o String buyerID 
+  o Double balance
+  }
+
+participant Seller identified by sellerID { 
+  o String sellerID 
+  o Double balance
+  }  
+
+
+asset Maison identified by maisonID { 
+o String maisonID
+o String statut
+o Double prix
+--> Seller seller }  
+
+enum Statut {
+  o a_vendre
+  o a_louer
+  o vendue
+  o louée
+}
+
+transaction SaleTransaction {
+    --> Buyer buyer
+    --> Seller seller
+    --> Maison maison
+}
+
+transaction LocationTransaction { 
+--> Maison maison 
+--> Buyer buyer
+--> Seller seller
+ }
